@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<title>选导师啦</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+	.log_in{
+		position: absolute;
+		width: 600px;
+		height: 400px;
+		left: 30%;
+		top: 20%;
+		border-style: solid;
+		border-width: 5px;
+		border-color: gray;
+		border-radius: 25px;
+	}
+	.log_in>h1{
+		position: relative;
+		margin-left: auto;
+		margin-right: auto;
+		left: 23%;
+	}
+	p{
+		display: inline-block;
+		font-size: 20px;
+	}
+	body{
+		margin: 0px;
+		background-color: lightgray;
+	}
+	span{
+		position: relative;
+		display: block;
+		margin: 10px;
+		margin-left: 170px;
+	}
+	.account,.password{
+		margin-left: 10px;
+		height: 30px;
+		width: 200px;
+		margin-top: 30px;
+	}
+	.radio{
+		left: 67px;
+		margin-top: 30px;
+	}
+	.radio p{
+		font-size: 15px;
+		margin-right: 20px;
+	}
+	[type=submit]{
+		position: relative;
+		left: 60px;
+		margin-top: 30px;
+		width: 150px;
+		height: 50px;
+	}
+</style>
+</head>
+<body>
+	<!-- 登录界面，跳转到login.php文件进行登录信息处理 -->
+	<div class="log_in">
+		<h1>杭师大导师选择系统</h1>
+		<form id="info" action="login.php" method="post">
+			<span><p>账号:</p><input type="text" name="account" class="account"></span>
+			<span><p>密码:</p><input type="password" name="password" class="password"></span>
+			<span class="radio"><input type="radio" name="user" value="students" checked="checked" ><p>学生</p>
+			<input type="radio" name="user" value="teacher"><p>教师</p>
+			<input type="radio" name="user" value="manager"><p>管理员</p></span>
+			<span><input type="submit" class="btn btn-primary" name="" value="登录" class="btn"></span>
+		</form>
+	</div>
+</body>
+</html>
